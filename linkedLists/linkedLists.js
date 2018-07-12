@@ -26,5 +26,11 @@ class linkedList {
         this.head = newHead;
       }
     };
+    this.addToTail = (value) => {
+      let newTail = new ListNode(value);
+      this.tail.next = newTail;
+      newTail.prev = this.tail;
+      this.tail = newTail;
+    };
   }
 }
